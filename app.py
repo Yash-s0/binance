@@ -1,9 +1,13 @@
 from flask import Flask
 from flask_restful import Api, request
+from flask_cors import CORS
 import requests
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
+
+
 
 @app.get("/")
 def sayhello():
@@ -11,7 +15,7 @@ def sayhello():
     name= "yash"
     return {message: name}
 
-@app.get("/get-price")
+@app.post("/get-price")
 def get_data():
     # API CALL
     args = request.json
@@ -26,7 +30,7 @@ def get_data():
     url_api = requests.get(url)
     # print(url_api)
     formatted_data = url_api.json()
-    # print(formatted_data)
+    print(formatted_data)
     try:
         price = formatted_data["price"]
         # print(price)
