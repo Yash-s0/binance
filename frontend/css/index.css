@@ -182,15 +182,6 @@ body {
     margin: 1rem;
 }
 
-.leftHead {
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    -ms-text-combine-horizontal: .5rem;
-    padding: .5rem;
-}
-
 .search {
     display: flex;
     align-items: center;
@@ -220,35 +211,17 @@ input.search-bar {
     font-family: inherit;
     font-size: 105%;
     width: calc(100% - 100px);
+    text-transform: uppercase;
 }
 
 button:hover {
     background: #7c7c7c6b;
 }
 
-h1 {
-    font-size: 3rem;
+.data {
+    color: white;
+    text-transform: uppercase;
+    text-align: right;
 }
 
-h2 {
-    text-align: center;
-}
-
-.descripton {
-    text-transform: capitalize;
-    margin-left: 8px;
-
-}
-
-@media all and (max-width: 420px) {
-    .weatherIcon {
-        width: 30%;
-        height: auto;
-        text-align: center;
-    }
-
-    .gridItem {
-        align-self: center;
-        justify-self: center;
-    }
-}
+@media all and (max-width: 420px) {}

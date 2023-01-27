@@ -10,15 +10,14 @@ const callapi = (symbol) => {
             price = response.data["price"]
             if (price == undefined) {
                 console.log("Invalid symbol.")
+                document.getElementById("data").innerHTML = "<h3>" + "Invalid Symbol" + "</h3>"
             }
             else {
                 const price = response.data["price"]
                 console.log(price)
+                document.getElementById("data").innerHTML = "<h3>" + symbol + "  :  " + price + "</h3>"
             }
 
-            // document.querySelector(".temp").innerText = "Price " + price;
-
-            // document.getElementById("price").innerHTML = "Price" + price;
         })
         .catch(function (error) {
             console.log(error);
