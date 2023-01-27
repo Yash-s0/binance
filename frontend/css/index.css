@@ -166,7 +166,7 @@ body {
     margin: 0;
     background: #222;
     font-family: 'Open Sans', sans-serif;
-    background-image: url('https://source.unsplash.com/1600x900/?nature,water');
+    background-image: url('/frontend/assests/background.jpg');
     background-size: cover;
     background-position: center;
     font-size: 120%;
@@ -225,10 +225,6 @@ input.search-bar {
 button:hover {
     background: #7c7c7c6b;
 }
-
-
-
-
 
 h1 {
     font-size: 3rem;
