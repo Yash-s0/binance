@@ -6,6 +6,7 @@ body {
     margin: 0;
     background: #222;
     font-family: 'Open Sans', sans-serif;
+    font-family: "Copperplate";
     background-image: url('../assests/background.jpg');
     background-size: cover;
     background-position: center;
@@ -61,6 +62,10 @@ button:hover {
 .data {
     color: white;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.price {
     text-align: right;
 }
 

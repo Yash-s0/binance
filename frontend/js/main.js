@@ -15,7 +15,12 @@ const callapi = (symbol) => {
             else {
                 const price = response.data["price"]
                 console.log(price)
-                document.getElementById("data").innerHTML = "<h3>" + symbol + "  :  " + price + "</h3>"
+                document.getElementById("data").innerHTML = "<h3>" + response.data["symbol"] + "</h3>"
+                const node = document.createElement("div");
+                node.className = "price"
+                const textnode = document.createTextNode(price);
+                node.appendChild(textnode);
+                document.getElementById("data").appendChild(node);
             }
 
         })
