@@ -24,6 +24,8 @@ _____
     ``` 
     pip install -r requirements.txt
     ```
+`You are all set to run server for python file`
+
 
 ___
     
