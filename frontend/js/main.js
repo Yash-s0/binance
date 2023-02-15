@@ -38,28 +38,28 @@ const callapi = (symbol) => {
 
                 // High price tag element
                 const highPriceTag = document.createElement("div");
-                highPriceTag.className = "tagElement"
+                highPriceTag.className = "highPrice"
                 const highPriceTagNode = document.createTextNode("High Price  :  ");
                 highPriceTag.appendChild(highPriceTagNode);
                 document.getElementById("data").appendChild(highPriceTag);
 
                 // high price value element
                 const highPriceValue = document.createElement("div");
-                highPriceValue.className = "valueElement"
+                highPriceValue.className = "highValue"
                 const highPriceValueNode = document.createTextNode(highPrice);
                 highPriceValue.appendChild(highPriceValueNode);
                 document.getElementById("data").appendChild(highPriceValue);
 
                 // low price tag element
                 const lowPriceTag = document.createElement("div");
-                lowPriceTag.className = "tagElement"
+                lowPriceTag.className = "lowPrice"
                 const lowPriceTagNode = document.createTextNode("Low Price  :  ");
                 lowPriceTag.appendChild(lowPriceTagNode);
                 document.getElementById("data").appendChild(lowPriceTag);
 
                 // low price value element
                 const lowPriceValue = document.createElement("div");
-                lowPriceValue.className = "valueElement"
+                lowPriceValue.className = "lowValue"
                 const lowPriceValueNode = document.createTextNode(lowPrice);
                 lowPriceValue.appendChild(lowPriceValueNode);
                 document.getElementById("data").appendChild(lowPriceValue);
