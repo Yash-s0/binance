@@ -24,7 +24,7 @@ _____
     ``` 
     pip install -r requirements.txt
     ```
-`You are all set to run the server`
+    `You are all set to run the server`
 
 
 ___
