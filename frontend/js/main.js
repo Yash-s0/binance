@@ -9,18 +9,60 @@ const callapi = (symbol) => {
         .then(function (response) {
             price = response.data["price"]
             if (price == undefined) {
+                console.log(response.data)
                 console.log("Invalid symbol.")
-                document.getElementById("data").innerHTML = "<h3>" + "Invalid Symbol" + "</h3>"
+                document.getElementById("data").innerHTML = "<h3>" + "Invalid Symbol ! ! !" + "</h3>"
             }
             else {
+                console.log(response.data)
                 const price = response.data["price"]
-                console.log(price)
+                const highPrice = response.data["highPrice"]
+                const lowPrice = response.data["lowPrice"]
+
+                // Push Symbol to html
                 document.getElementById("data").innerHTML = "<h3>" + response.data["symbol"] + "</h3>"
-                const node = document.createElement("div");
-                node.className = "price"
-                const textnode = document.createTextNode(price);
-                node.appendChild(textnode);
-                document.getElementById("data").appendChild(node);
+
+                // price tag element
+                const priceTag = document.createElement("div");
+                priceTag.className = "price"
+                const priceTagNode = document.createTextNode("Price  : ");
+                priceTag.appendChild(priceTagNode);
+                document.getElementById("data").appendChild(priceTag);
+
+                // price value element
+                const priceValue = document.createElement("div");
+                priceValue.className = "priceValue"
+                const priceValueNode = document.createTextNode(price);
+                priceValue.appendChild(priceValueNode);
+                document.getElementById("data").appendChild(priceValue);
+
+                // High price tag element
+                const highPriceTag = document.createElement("div");
+                highPriceTag.className = "tagElement"
+                const highPriceTagNode = document.createTextNode("High Price  :  ");
+                highPriceTag.appendChild(highPriceTagNode);
+                document.getElementById("data").appendChild(highPriceTag);
+
+                // high price value element
+                const highPriceValue = document.createElement("div");
+                highPriceValue.className = "valueElement"
+                const highPriceValueNode = document.createTextNode(highPrice);
+                highPriceValue.appendChild(highPriceValueNode);
+                document.getElementById("data").appendChild(highPriceValue);
+
+                // low price tag element
+                const lowPriceTag = document.createElement("div");
+                lowPriceTag.className = "tagElement"
+                const lowPriceTagNode = document.createTextNode("Low Price  :  ");
+                lowPriceTag.appendChild(lowPriceTagNode);
+                document.getElementById("data").appendChild(lowPriceTag);
+
+                // low price value element
+                const lowPriceValue = document.createElement("div");
+                lowPriceValue.className = "valueElement"
+                const lowPriceValueNode = document.createTextNode(lowPrice);
+                lowPriceValue.appendChild(lowPriceValueNode);
+                document.getElementById("data").appendChild(lowPriceValue);
             }
 
         })

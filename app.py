@@ -25,19 +25,23 @@ def get_data():
     
     print(symbol_cap)
 
-    url = "https://api.binance.com/api/v3/ticker/price?symbol={}".format(symbol_cap)
+    url = "https://api.binance.com/api/v3/ticker/24hr?symbol={}".format(symbol_cap)
     print(url)
     url_api = requests.get(url)
     # print(url_api)
     formatted_data = url_api.json()
     print(formatted_data)
     try:
-        price = formatted_data["price"]
-        # print(price)
+        price = formatted_data["lastPrice"]
+        print(price)
+        highPrice = formatted_data["highPrice"]
+        lowPrice = formatted_data["lowPrice"]
         return {
             "success": "True",
             "symbol": symbol_cap,
-            "price": price
+            "price": price,
+            "highPrice": highPrice,
+            "lowPrice": lowPrice
         }
     except:
         return {"success": "Flase", "message": "Invalid Symbol!!!"}
@@ -45,3 +49,8 @@ def get_data():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+
