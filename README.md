@@ -6,7 +6,7 @@ _____
 
 - Clone the Repo.
     ```
-    $ git clone https://github.com/Yash-s0/binance.git
+    git clone https://github.com/Yash-s0/binance.git
     ```
 - Change Directory
     ```
