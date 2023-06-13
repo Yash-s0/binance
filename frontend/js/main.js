@@ -9,12 +9,9 @@ const callapi = (symbol) => {
         .then(function (response) {
             price = response.data["price"]
             if (price == undefined) {
-                console.log(response.data)
-                console.log("Invalid symbol.")
                 document.getElementById("data").innerHTML = "<h3>" + "Invalid Symbol ! ! !" + "</h3>"
             }
             else {
-                console.log(response.data)
                 const price = response.data["price"]
                 const highPrice = response.data["highPrice"]
                 const lowPrice = response.data["lowPrice"]
@@ -76,7 +73,6 @@ function runFunction() {
     const formEvent = form.addEventListener('submit', event => {
         event.preventDefault();
         const symbol = document.querySelector('#symbol').value;
-        console.log(symbol)
         callapi(symbol);
     });
 }
